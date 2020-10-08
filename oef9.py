@@ -1,8 +1,8 @@
 import random
 
 getal = random.randrange(1, 21)
-gok = 0;
-aantalGoks = 0;
+gok = 0
+aantalGoks = 0
 while not getal == gok:
     aantalGoks+= 1
     gok = int(input("doe een gok tussen 1 en 20"))
