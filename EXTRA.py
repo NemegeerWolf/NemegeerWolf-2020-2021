@@ -1,3 +1,5 @@
+#snake 
+#made by wolf nemegeer
 
 import time
 import keyboard
