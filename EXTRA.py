@@ -25,7 +25,8 @@ def teken_speelveld():
 
     for stukje in snake:
         speelveld[stukje[1]][stukje[0]] = " * "
-        
+
+    speelveld[snake[0][1]][snake[0][0]] = " O "  
 
     for i in range(0, 12):
         rij = ""
