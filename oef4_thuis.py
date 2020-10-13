@@ -7,7 +7,7 @@ def controleer_emailadres(email_adress):
     student_punt_howest_geschreven = False
     punt2_geweest = False
 
-    index = 0;
+    index = 0
     for symbool in email_adress:
         
         if symbool == ".":
@@ -32,3 +32,4 @@ def controleer_emailadres(email_adress):
 
 
 print(controleer_emailadres(email_adress))
+

@@ -8,7 +8,7 @@ snake = [[6,6]]
 RichtingBlok = [0]
 food = [0,0]
 speelveld = []
-milisec = 0;
+milisec = 0
 
 def teken_speelveld():
     global snake
@@ -43,26 +43,26 @@ def controleer_keyboard():
         
             # kan niet keren.
         if not(RichtingBlok[0] == 4 and len(snake) > 1):
-            RichtingBlok[0] = 2;
+            RichtingBlok[0] = 2
             
         
     elif keyboard.is_pressed('Up'):
         
         if not(RichtingBlok[0] == 3 and len(snake) > 1):
-            RichtingBlok[0]= 1;
+            RichtingBlok[0]= 1
             
         
     elif keyboard.is_pressed('Left'):
         
         if not (RichtingBlok[0] == 2 and len(snake) > 1):
-            RichtingBlok[0] = 4;
+            RichtingBlok[0] = 4
             
         
     elif keyboard.is_pressed('Down'):
         
         if not(RichtingBlok[0] == 1 and len(snake) > 1):
             
-            RichtingBlok[0] = 3;
+            RichtingBlok[0] = 3
             
 def bereken_spel():
     global snake
@@ -93,28 +93,28 @@ def bereken_spel():
         
         # verplaating snake
         # verplaats snake
-        i = 0;
+        i = 0
         for stukje in snake:
             x = stukje[0]
             y = stukje[1]
             if RichtingBlok[i] == 1:
             
-                y = y - 1;
+                y = y - 1
                 
             
             if RichtingBlok[i] == 2:
             
-                x = x + 1;
+                x = x + 1
                 
             
             if RichtingBlok[i] == 3:
             
-                y = y + 1;
+                y = y + 1
                 
             
             if RichtingBlok[i] == 4:
             
-                x = x - 1;
+                x = x - 1
             stukje = [x,y]    
             
             # raak je je eigen staart
@@ -126,8 +126,8 @@ def bereken_spel():
                     
                     
                     
-                    RichtingBlok.clear();
-                    RichtingBlok.append(0);
+                    RichtingBlok.clear()
+                    RichtingBlok.append(0)
                     snake = [[6,6]]
                     
                     food = [(random.randrange(1, 12)), (random.randrange(1, 12))]
@@ -150,11 +150,11 @@ def bereken_spel():
             
             if y == -1:
             
-                y = 11;
+                y = 11
             
             if y == 12: 
             
-                y = 1;
+                y = 1
             
 
             
@@ -169,7 +169,7 @@ def bereken_spel():
         
             if not j == 0:
             
-                RichtingBlok[j] = RichtingBlok[j - 1];
+                RichtingBlok[j] = RichtingBlok[j - 1]
             
             j-=1
         
@@ -194,4 +194,4 @@ while(True):
     
 
     time.sleep(0.02)
-    milisec += 20;
+    milisec += 20
